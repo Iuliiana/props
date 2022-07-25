@@ -29,14 +29,14 @@ const ListItem = (props) => {
 
 // fixme &hellip;
     const titleValidate = (title, n) => {
-        return (!!title && title.length > n) ? title.substr(0, n - 1) + '...' : title;
+        return (title.length > n) ? title.substr(0, n - 1) + '...' : title;
     }
 
     return (
         <div className="item">
             <div className="item-image">
                 <a href={item.url}>
-                    <img src={(!!item.MainImage) ? item.MainImage.url_570xN : ''} alt={item.title}/>
+                    <img src={item.MainImage.url_570xN} alt={item.title}/>
                 </a>
             </div>
             <div className="item-details">

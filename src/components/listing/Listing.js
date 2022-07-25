@@ -6,7 +6,7 @@ const Listing = (props) => {
 
     return (
         <div className="item-list">
-            {items.map(item => <ListItem key={item.listing_id} item={item}/>)}
+            {items.map(item => item.state === 'active'&&<ListItem key={item.listing_id} item={item}/>)}
         </div>
     );
 };
